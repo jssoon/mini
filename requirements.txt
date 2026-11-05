@@ -1,0 +1,18 @@
+# 에이전트
+langchain>=1.0
+langchain-core>=1.0
+langgraph>=1.0
+
+# 모델·임베딩 (Amazon Bedrock)
+langchain-aws>=1.0
+boto3
+
+# 서버 (POST /query)
+fastapi
+uvicorn
+
+# 설정 (.env)
+python-dotenv
+
+# 테스트 (tests/)
+pytest

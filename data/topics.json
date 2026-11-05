@@ -1,0 +1,441 @@
+{
+  "meta": {
+    "name": "OPIC 주제·문제 유형 목록",
+    "version": "1.0",
+    "note": "예시 질문은 연습용으로 새로 작성한 것이며, 실제 시험 기출 문항이 아닙니다.",
+    "fields": {
+      "id": "주제 고유 이름 (분류-주제 형식, evaluation/test_queries.csv의 topic 값과 같음)",
+      "category": "주제 분류",
+      "source": "survey = Background Survey 선택 주제, common = 공통 주제, unexpected = 돌발 주제",
+      "name_en": "영어 주제명",
+      "question_types": "이 주제에서 주로 나오는 문제 유형",
+      "sample_questions": "문제 유형별 예시 질문",
+      "vocabulary": "스크립트에 활용할 주제 어휘"
+    },
+    "question_types": ["묘사", "루틴", "과거 경험", "비교", "롤플레이(질문하기)", "롤플레이(문제 해결)"],
+    "combo_set": ["묘사", "과거 경험", "비교"]
+  },
+  "categories": [
+    {"category": "자기소개", "source": "common", "description": "시험 첫 문항. 이름·직업·성격·관심사를 짧게 소개"},
+    {"category": "직업", "source": "survey", "description": "직장인·학생·구직자 등 현재 신분과 하는 일"},
+    {"category": "거주 형태", "source": "survey", "description": "사는 집의 형태와 동네, 함께 사는 사람"},
+    {"category": "여가", "source": "survey", "description": "여가 시간에 하는 활동"},
+    {"category": "취미", "source": "survey", "description": "관심사와 취미"},
+    {"category": "운동", "source": "survey", "description": "즐겨 하는 운동"},
+    {"category": "여행", "source": "survey", "description": "휴가·출장·여행 경험"},
+    {"category": "돌발", "source": "unexpected", "description": "Background Survey에서 고르지 않아도 나오는 일상·사회 주제"}
+  ],
+  "topics": [
+    {
+      "id": "자기소개",
+      "category": "자기소개",
+      "source": "common",
+      "name_en": "Self-introduction",
+      "question_types": ["묘사"],
+      "sample_questions": {
+        "묘사": "Let's start the interview. Please tell me a little bit about yourself."
+      },
+      "vocabulary": ["work as", "major in", "outgoing", "easygoing", "in my free time", "these days"]
+    },
+    {
+      "id": "직업",
+      "category": "직업",
+      "source": "survey",
+      "name_en": "Work / Company",
+      "question_types": ["묘사", "루틴", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "Describe the company you work for. What does it do and where is it located?",
+        "루틴": "Tell me about a typical day at work, from the time you arrive to the time you leave.",
+        "과거 경험": "Tell me about a memorable project or challenge you had at work.",
+        "비교": "How has the way you work changed compared to when you first started your job?"
+      },
+      "vocabulary": ["colleague", "commute", "work from home", "meeting", "deadline", "team leader", "office"]
+    },
+    {
+      "id": "직업-학생",
+      "category": "직업",
+      "source": "survey",
+      "name_en": "School / Student life",
+      "question_types": ["묘사", "루틴", "과거 경험"],
+      "sample_questions": {
+        "묘사": "Describe your school campus. What buildings and places are there?",
+        "루틴": "What do you usually do on a school day?",
+        "과거 경험": "Tell me about a memorable class or project you had at school."
+      },
+      "vocabulary": ["campus", "major", "semester", "assignment", "library", "club activity", "professor"]
+    },
+    {
+      "id": "거주 형태",
+      "category": "거주 형태",
+      "source": "survey",
+      "name_en": "Home",
+      "question_types": ["묘사", "루틴", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "Describe the home you live in. What does it look like and what is your favorite room?",
+        "루틴": "What do you usually do at home on weekdays and weekends?",
+        "과거 경험": "Tell me about a time you made a change to your home, like moving or redecorating.",
+        "비교": "Compare the home you lived in as a child with the home you live in now."
+      },
+      "vocabulary": ["apartment", "studio", "living room", "bedroom", "balcony", "furniture", "move in", "cozy"]
+    },
+    {
+      "id": "거주 형태-동네",
+      "category": "거주 형태",
+      "source": "survey",
+      "name_en": "Neighborhood",
+      "question_types": ["묘사", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "Describe your neighborhood. What kinds of places are there?",
+        "과거 경험": "Tell me about something interesting that happened in your neighborhood.",
+        "비교": "How has your neighborhood changed over the years?"
+      },
+      "vocabulary": ["convenience store", "subway station", "residential area", "quiet", "crowded", "neighbor"]
+    },
+    {
+      "id": "여가-영화 보기",
+      "category": "여가",
+      "source": "survey",
+      "name_en": "Watching movies",
+      "question_types": ["묘사", "루틴", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "What kinds of movies do you like? Tell me about your favorite movie or actor.",
+        "루틴": "What do you usually do before and after watching a movie?",
+        "과거 경험": "Tell me about a movie that left a strong impression on you.",
+        "비교": "How are movies today different from movies in the past?"
+      },
+      "vocabulary": ["genre", "action", "romantic comedy", "plot", "streaming service", "movie theater", "popcorn"]
+    },
+    {
+      "id": "여가-공원 가기",
+      "category": "여가",
+      "source": "survey",
+      "name_en": "Going to parks",
+      "question_types": ["묘사", "루틴", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "Describe a park you like to go to. What does it look like?",
+        "루틴": "What do you usually do when you go to the park?",
+        "과거 경험": "Tell me about a memorable day you spent at a park.",
+        "비교": "How are parks today different from parks when you were young?"
+      },
+      "vocabulary": ["trail", "bench", "lawn", "picnic", "ride a bike", "fresh air", "riverside"]
+    },
+    {
+      "id": "여가-카페 가기",
+      "category": "여가",
+      "source": "survey",
+      "name_en": "Going to cafés",
+      "question_types": ["묘사", "루틴", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "Describe a café you often go to. What is the atmosphere like?",
+        "루틴": "What do you usually do at a café?",
+        "과거 경험": "Tell me about a memorable experience you had at a café.",
+        "비교": "How have cafés in your country changed over the years?"
+      },
+      "vocabulary": ["latte", "dessert", "atmosphere", "franchise", "local café", "study", "chat"]
+    },
+    {
+      "id": "여가-쇼핑하기",
+      "category": "여가",
+      "source": "survey",
+      "name_en": "Shopping",
+      "question_types": ["묘사", "루틴", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "Where do you like to go shopping? Describe the place.",
+        "루틴": "What do you usually do when you go shopping?",
+        "과거 경험": "Tell me about a memorable shopping experience.",
+        "비교": "Compare shopping online with shopping in stores."
+      },
+      "vocabulary": ["department store", "online shopping", "discount", "on sale", "delivery", "try on", "refund"]
+    },
+    {
+      "id": "취미-음악 감상",
+      "category": "취미",
+      "source": "survey",
+      "name_en": "Listening to music",
+      "question_types": ["묘사", "루틴", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "What kind of music do you like? Who is your favorite singer or band?",
+        "루틴": "When and where do you usually listen to music?",
+        "과거 경험": "Tell me about a concert or live performance you went to.",
+        "비교": "How has the way you listen to music changed over time?"
+      },
+      "vocabulary": ["playlist", "genre", "lyrics", "concert", "earphones", "streaming", "melody"]
+    },
+    {
+      "id": "취미-요리",
+      "category": "취미",
+      "source": "survey",
+      "name_en": "Cooking",
+      "question_types": ["묘사", "루틴", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "What kinds of dishes do you like to cook?",
+        "루틴": "Tell me how you usually prepare a meal, step by step.",
+        "과거 경험": "Tell me about a time when cooking didn't go as planned.",
+        "비교": "How has the way people cook at home changed compared to the past?"
+      },
+      "vocabulary": ["recipe", "ingredients", "grocery", "stir-fry", "air fryer", "chop", "season"]
+    },
+    {
+      "id": "취미-독서",
+      "category": "취미",
+      "source": "survey",
+      "name_en": "Reading",
+      "question_types": ["묘사", "루틴", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "What kinds of books do you like to read? Tell me about your favorite author.",
+        "루틴": "When and where do you usually read?",
+        "과거 경험": "Tell me about a book that changed the way you think.",
+        "비교": "Compare reading paper books with reading e-books."
+      },
+      "vocabulary": ["novel", "e-book", "bookstore", "author", "chapter", "bestseller", "page-turner"]
+    },
+    {
+      "id": "운동-조깅",
+      "category": "운동",
+      "source": "survey",
+      "name_en": "Jogging",
+      "question_types": ["묘사", "루틴", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "Where do you usually go jogging? Describe the place.",
+        "루틴": "Tell me about your jogging routine.",
+        "과거 경험": "Tell me about a memorable experience you had while jogging.",
+        "비교": "How has your jogging habit changed since you first started?"
+      },
+      "vocabulary": ["running shoes", "track", "stretch", "pace", "warm up", "cool down", "out of breath"]
+    },
+    {
+      "id": "운동-걷기",
+      "category": "운동",
+      "source": "survey",
+      "name_en": "Walking",
+      "question_types": ["묘사", "루틴", "과거 경험"],
+      "sample_questions": {
+        "묘사": "Where do you like to go for a walk?",
+        "루틴": "When and how often do you go walking?",
+        "과거 경험": "Tell me about a memorable walk you took."
+      },
+      "vocabulary": ["take a walk", "stroll", "path", "steps", "scenery", "clear my head"]
+    },
+    {
+      "id": "운동-헬스",
+      "category": "운동",
+      "source": "survey",
+      "name_en": "Going to the gym",
+      "question_types": ["묘사", "루틴", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "Describe the gym you go to.",
+        "루틴": "Tell me about your workout routine at the gym.",
+        "과거 경험": "Tell me about when you first started going to the gym.",
+        "비교": "How have gyms changed compared to the past?"
+      },
+      "vocabulary": ["work out", "treadmill", "weights", "personal trainer", "membership", "sore", "protein shake"]
+    },
+    {
+      "id": "운동-수영",
+      "category": "운동",
+      "source": "survey",
+      "name_en": "Swimming",
+      "question_types": ["묘사", "루틴", "과거 경험"],
+      "sample_questions": {
+        "묘사": "Describe the place where you usually swim.",
+        "루틴": "What do you do before, during, and after swimming?",
+        "과거 경험": "Tell me about how you learned to swim."
+      },
+      "vocabulary": ["swimming pool", "lane", "goggles", "freestyle", "locker room", "lesson"]
+    },
+    {
+      "id": "여행-국내 여행",
+      "category": "여행",
+      "source": "survey",
+      "name_en": "Domestic travel",
+      "question_types": ["묘사", "루틴", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "Where do you like to travel in your country? Describe the place.",
+        "루틴": "What do you usually do to prepare for a trip?",
+        "과거 경험": "Tell me about a memorable trip you took in your country.",
+        "비교": "Compare traveling in the past with traveling these days."
+      },
+      "vocabulary": ["road trip", "rental car", "local food", "guesthouse", "scenery", "pack", "itinerary"]
+    },
+    {
+      "id": "여행-해외 여행",
+      "category": "여행",
+      "source": "survey",
+      "name_en": "Overseas travel",
+      "question_types": ["묘사", "루틴", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "Tell me about a country or city you have visited.",
+        "루틴": "What do you usually do when you arrive in a new country?",
+        "과거 경험": "Tell me about an unexpected problem you had while traveling abroad.",
+        "비교": "Compare traveling abroad with traveling in your own country."
+      },
+      "vocabulary": ["passport", "flight", "jet lag", "currency", "sightseeing", "souvenir", "culture shock"]
+    },
+    {
+      "id": "여행-해변",
+      "category": "여행",
+      "source": "survey",
+      "name_en": "Beach trips",
+      "question_types": ["묘사", "루틴", "과거 경험"],
+      "sample_questions": {
+        "묘사": "Describe a beach you like to visit.",
+        "루틴": "What do you usually do when you go to the beach?",
+        "과거 경험": "Tell me about a memorable trip to the beach."
+      },
+      "vocabulary": ["seaside", "sand", "waves", "sunscreen", "seafood", "sunset", "swim in the ocean"]
+    },
+    {
+      "id": "돌발-재활용",
+      "category": "돌발",
+      "source": "unexpected",
+      "name_en": "Recycling",
+      "question_types": ["묘사", "루틴", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "How do people recycle in your country?",
+        "루틴": "Tell me how you recycle at home.",
+        "과거 경험": "Tell me about a time you had trouble with recycling.",
+        "비교": "How has recycling changed compared to the past?"
+      },
+      "vocabulary": ["separate", "plastic", "food waste", "recycling bin", "environment", "disposable"]
+    },
+    {
+      "id": "돌발-명절",
+      "category": "돌발",
+      "source": "unexpected",
+      "name_en": "Holidays",
+      "question_types": ["묘사", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "Tell me about a major holiday in your country. What do people do?",
+        "과거 경험": "Tell me about a memorable holiday you spent with your family.",
+        "비교": "How have holidays changed compared to when you were young?"
+      },
+      "vocabulary": ["Lunar New Year", "Chuseok", "relatives", "traditional food", "hometown", "traffic jam"]
+    },
+    {
+      "id": "돌발-은행",
+      "category": "돌발",
+      "source": "unexpected",
+      "name_en": "Banks",
+      "question_types": ["묘사", "루틴", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "Describe a bank you usually go to.",
+        "루틴": "What do you usually do when you visit a bank?",
+        "과거 경험": "Tell me about a problem you had at a bank.",
+        "비교": "How has banking changed compared to the past?"
+      },
+      "vocabulary": ["account", "teller", "ATM", "mobile banking", "transfer", "wait in line", "number ticket"]
+    },
+    {
+      "id": "돌발-교통",
+      "category": "돌발",
+      "source": "unexpected",
+      "name_en": "Transportation",
+      "question_types": ["묘사", "루틴", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "Describe the public transportation in your city.",
+        "루틴": "How do you usually get to work or school?",
+        "과거 경험": "Tell me about a problem you had while using public transportation.",
+        "비교": "How has transportation changed in your city?"
+      },
+      "vocabulary": ["subway", "bus stop", "transfer", "rush hour", "traffic card", "crowded", "taxi"]
+    },
+    {
+      "id": "돌발-날씨",
+      "category": "돌발",
+      "source": "unexpected",
+      "name_en": "Weather / Seasons",
+      "question_types": ["묘사", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "Describe the weather and seasons in your country.",
+        "과거 경험": "Tell me about a time when the weather affected your plans.",
+        "비교": "How has the weather changed compared to the past?"
+      },
+      "vocabulary": ["humid", "rainy season", "heat wave", "fine dust", "chilly", "climate change"]
+    },
+    {
+      "id": "돌발-인터넷·기술",
+      "category": "돌발",
+      "source": "unexpected",
+      "name_en": "Internet / Technology",
+      "question_types": ["묘사", "루틴", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "What technology do you use most often in your daily life?",
+        "루틴": "What do you usually do on the internet?",
+        "과거 경험": "Tell me about a time when you had a problem with a device.",
+        "비교": "How has technology changed the way people communicate?"
+      },
+      "vocabulary": ["smartphone", "app", "social media", "Wi-Fi", "update", "online", "convenient"]
+    },
+    {
+      "id": "돌발-가구·가전",
+      "category": "돌발",
+      "source": "unexpected",
+      "name_en": "Furniture / Appliances",
+      "question_types": ["묘사", "과거 경험", "비교"],
+      "sample_questions": {
+        "묘사": "Describe your favorite piece of furniture or appliance at home.",
+        "과거 경험": "Tell me about a time an appliance broke down.",
+        "비교": "Compare the furniture or appliances you had in the past with what you have now."
+      },
+      "vocabulary": ["sofa", "refrigerator", "washing machine", "robot vacuum", "break down", "repairman"]
+    }
+  ],
+  "roleplay_scenarios": [
+    {
+      "id": "RP-Q01",
+      "type": "롤플레이(질문하기)",
+      "related_topic": "여가-영화 보기",
+      "situation": "친구에게 주말에 함께 영화 보러 가자고 하며 영화·시간·장소를 묻기",
+      "sample_question": "You want to see a movie with a friend this weekend. Call your friend and ask three or four questions to make plans."
+    },
+    {
+      "id": "RP-Q02",
+      "type": "롤플레이(질문하기)",
+      "related_topic": "여행-국내 여행",
+      "situation": "숙소에 전화해 예약 가능 여부·가격·시설을 묻기",
+      "sample_question": "You are planning a trip. Call a hotel and ask three or four questions about booking a room."
+    },
+    {
+      "id": "RP-Q03",
+      "type": "롤플레이(질문하기)",
+      "related_topic": "운동-헬스",
+      "situation": "헬스장에 회원권 종류·운영 시간·PT를 문의하기",
+      "sample_question": "You want to join a new gym. Call the gym and ask three or four questions about membership."
+    },
+    {
+      "id": "RP-Q04",
+      "type": "롤플레이(질문하기)",
+      "related_topic": "여가-쇼핑하기",
+      "situation": "가게에 사고 싶은 물건의 재고·색상·배송을 묻기",
+      "sample_question": "You want to buy a new item at a store. Call the store and ask three or four questions about it."
+    },
+    {
+      "id": "RP-P01",
+      "type": "롤플레이(문제 해결)",
+      "related_topic": "여가-영화 보기",
+      "situation": "친구와의 영화 약속에 갈 수 없게 되어 사정을 설명하고 대안을 제시하기",
+      "sample_question": "You cannot keep your movie plans with your friend. Call your friend, explain the situation, and suggest two or three alternatives."
+    },
+    {
+      "id": "RP-P02",
+      "type": "롤플레이(문제 해결)",
+      "related_topic": "여행-해외 여행",
+      "situation": "호텔 객실에 문제가 생겨 프런트에 설명하고 해결 방법을 제안하기",
+      "sample_question": "There is a problem with your hotel room. Call the front desk, explain the problem, and suggest two or three ways to solve it."
+    },
+    {
+      "id": "RP-P03",
+      "type": "롤플레이(문제 해결)",
+      "related_topic": "여가-쇼핑하기",
+      "situation": "구매한 물건이 고장 나 매장에 교환·환불을 요청하기",
+      "sample_question": "The item you bought is broken. Call the store, explain the problem, and suggest two or three solutions."
+    },
+    {
+      "id": "RP-P04",
+      "type": "롤플레이(문제 해결)",
+      "related_topic": "돌발-은행",
+      "situation": "은행 카드를 분실해 은행에 상황을 설명하고 해결을 요청하기",
+      "sample_question": "You lost your bank card. Call the bank, explain what happened, and ask for help."
+    }
+  ]
+}

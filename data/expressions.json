@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "name": "OPIC 자주 쓰는 표현·필러 사전",
+    "version": "1.0",
+    "fields": {
+      "id": "표현 고유 번호",
+      "category": "표현 분류",
+      "expression": "영어 표현",
+      "meaning_ko": "한국어 뜻",
+      "question_types": "주로 쓰이는 문제 유형 (전체 = 모든 유형)",
+      "min_level": "이 표현을 쓰기 시작하기 좋은 최소 등급",
+      "example": "예문"
+    },
+    "level_order": ["IM1", "IM2", "IM3", "IH", "AL"]
+  },
+  "expressions": [
+    {"id": "EX001", "category": "필러-시간 벌기", "expression": "Well, let me think...", "meaning_ko": "음, 생각해 볼게요...", "question_types": ["전체"], "min_level": "IM1", "example": "Well, let me think... I'd say my favorite place is the park near my house."},
+    {"id": "EX002", "category": "필러-시간 벌기", "expression": "Hmm, that's a good question.", "meaning_ko": "음, 좋은 질문이네요.", "question_types": ["전체"], "min_level": "IM1", "example": "Hmm, that's a good question. I've never really thought about it."},
+    {"id": "EX003", "category": "필러-시간 벌기", "expression": "Let me see...", "meaning_ko": "어디 보자...", "question_types": ["전체"], "min_level": "IM1", "example": "Let me see... it was about two years ago."},
+    {"id": "EX004", "category": "필러-시간 벌기", "expression": "How should I put it?", "meaning_ko": "뭐라고 해야 할까요?", "question_types": ["전체"], "min_level": "IM3", "example": "How should I put it? It was kind of a mix of excitement and nervousness."},
+    {"id": "EX005", "category": "필러-말 고르기", "expression": "you know", "meaning_ko": "있잖아요, 그러니까", "question_types": ["전체"], "min_level": "IM2", "example": "It's just, you know, a really relaxing place."},
+    {"id": "EX006", "category": "필러-말 고르기", "expression": "I mean", "meaning_ko": "제 말은, 그러니까", "question_types": ["전체"], "min_level": "IM3", "example": "It was expensive. I mean, really expensive."},
+    {"id": "EX007", "category": "필러-말 고르기", "expression": "kind of / sort of", "meaning_ko": "약간, 좀", "question_types": ["전체"], "min_level": "IM2", "example": "The room is kind of small, but it's cozy."},
+    {"id": "EX008", "category": "필러-솔직함", "expression": "To be honest,", "meaning_ko": "솔직히 말하면,", "question_types": ["전체"], "min_level": "IM2", "example": "To be honest, I'm not a big fan of cooking."},
+    {"id": "EX009", "category": "필러-솔직함", "expression": "Actually,", "meaning_ko": "사실은,", "question_types": ["전체"], "min_level": "IM2", "example": "Actually, I didn't like jogging at first."},
+
+    {"id": "EX010", "category": "도입", "expression": "Oh, you want to know about ~? Sure.", "meaning_ko": "아, ~에 대해 알고 싶으시다고요? 좋아요.", "question_types": ["묘사", "루틴", "과거 경험", "비교"], "min_level": "IM2", "example": "Oh, you want to know about my neighborhood? Sure."},
+    {"id": "EX011", "category": "도입", "expression": "I'd love to talk about ~.", "meaning_ko": "~에 대해 이야기하고 싶어요.", "question_types": ["묘사", "루틴", "과거 경험"], "min_level": "IM2", "example": "I'd love to talk about my favorite café."},
+    {"id": "EX012", "category": "도입", "expression": "When it comes to ~,", "meaning_ko": "~에 관해서라면,", "question_types": ["묘사", "루틴", "비교"], "min_level": "IM3", "example": "When it comes to music, I listen to almost everything."},
+    {"id": "EX013", "category": "도입", "expression": "This brings back memories.", "meaning_ko": "옛 생각이 나네요.", "question_types": ["과거 경험"], "min_level": "IH", "example": "Oh, this brings back memories. Let me tell you about my first trip to Jeju."},
+
+    {"id": "EX014", "category": "묘사", "expression": "There is / There are ~", "meaning_ko": "~이 있어요", "question_types": ["묘사"], "min_level": "IM1", "example": "There are a lot of trees and benches in the park."},
+    {"id": "EX015", "category": "묘사", "expression": "It's located ~", "meaning_ko": "~에 위치해 있어요", "question_types": ["묘사"], "min_level": "IM2", "example": "It's located about five minutes from my apartment."},
+    {"id": "EX016", "category": "묘사", "expression": "The first thing you notice is ~", "meaning_ko": "가장 먼저 눈에 띄는 건 ~예요", "question_types": ["묘사"], "min_level": "IH", "example": "The first thing you notice is the huge window in the living room."},
+    {"id": "EX017", "category": "묘사", "expression": "What I like most about it is ~", "meaning_ko": "제가 가장 좋아하는 점은 ~예요", "question_types": ["묘사"], "min_level": "IM3", "example": "What I like most about it is the quiet atmosphere."},
+    {"id": "EX018", "category": "묘사", "expression": "It has a ~ vibe.", "meaning_ko": "~한 분위기가 있어요", "question_types": ["묘사"], "min_level": "IH", "example": "It has a really calm and cozy vibe."},
+    {"id": "EX019", "category": "묘사", "expression": "It's the kind of place where ~", "meaning_ko": "~하는 그런 곳이에요", "question_types": ["묘사"], "min_level": "IH", "example": "It's the kind of place where you can just sit and forget about time."},
+
+    {"id": "EX020", "category": "루틴", "expression": "I usually ~", "meaning_ko": "저는 보통 ~해요", "question_types": ["루틴"], "min_level": "IM1", "example": "I usually go jogging in the morning."},
+    {"id": "EX021", "category": "루틴", "expression": "once / twice / three times a week", "meaning_ko": "일주일에 한 번 / 두 번 / 세 번", "question_types": ["루틴"], "min_level": "IM1", "example": "I go to the gym three times a week."},
+    {"id": "EX022", "category": "루틴", "expression": "First, ~ Then, ~ After that, ~", "meaning_ko": "먼저 ~, 그다음 ~, 그 후에 ~", "question_types": ["루틴"], "min_level": "IM1", "example": "First, I stretch. Then, I run for 30 minutes. After that, I take a shower."},
+    {"id": "EX023", "category": "루틴", "expression": "I make it a rule to ~", "meaning_ko": "~하는 것을 원칙으로 해요", "question_types": ["루틴"], "min_level": "IH", "example": "I make it a rule to work out before breakfast."},
+    {"id": "EX024", "category": "루틴", "expression": "It's become part of my daily routine.", "meaning_ko": "일상의 일부가 됐어요", "question_types": ["루틴"], "min_level": "IH", "example": "Walking my dog has become part of my daily routine."},
+
+    {"id": "EX025", "category": "과거 경험", "expression": "It was ~ when ~", "meaning_ko": "~때였어요", "question_types": ["과거 경험"], "min_level": "IM2", "example": "It was last summer when I went to Busan with my friends."},
+    {"id": "EX026", "category": "과거 경험", "expression": "I'll never forget ~", "meaning_ko": "~을 절대 잊지 못할 거예요", "question_types": ["과거 경험"], "min_level": "IM3", "example": "I'll never forget the sunset we saw that day."},
+    {"id": "EX027", "category": "과거 경험", "expression": "All of a sudden,", "meaning_ko": "갑자기,", "question_types": ["과거 경험"], "min_level": "IM3", "example": "All of a sudden, it started pouring rain."},
+    {"id": "EX028", "category": "과거 경험", "expression": "At first, ~ but later ~", "meaning_ko": "처음엔 ~했지만 나중엔 ~", "question_types": ["과거 경험", "비교"], "min_level": "IM3", "example": "At first, I was nervous, but later I really enjoyed it."},
+    {"id": "EX029", "category": "과거 경험", "expression": "It turned out that ~", "meaning_ko": "알고 보니 ~였어요", "question_types": ["과거 경험"], "min_level": "IH", "example": "It turned out that the restaurant was closed that day."},
+    {"id": "EX030", "category": "과거 경험", "expression": "In the end,", "meaning_ko": "결국,", "question_types": ["과거 경험"], "min_level": "IM2", "example": "In the end, we had a great time anyway."},
+    {"id": "EX031", "category": "과거 경험", "expression": "Looking back,", "meaning_ko": "돌이켜 보면,", "question_types": ["과거 경험", "비교"], "min_level": "AL", "example": "Looking back, it was one of the best decisions I've ever made."},
+
+    {"id": "EX032", "category": "비교", "expression": "I used to ~, but these days ~", "meaning_ko": "예전엔 ~했는데, 요즘은 ~해요", "question_types": ["비교"], "min_level": "IM2", "example": "I used to buy CDs, but these days I just stream music on my phone."},
+    {"id": "EX033", "category": "비교", "expression": "Compared to ~,", "meaning_ko": "~와 비교하면,", "question_types": ["비교"], "min_level": "IM3", "example": "Compared to ten years ago, cafés are much more common now."},
+    {"id": "EX034", "category": "비교", "expression": "The biggest difference is ~", "meaning_ko": "가장 큰 차이는 ~예요", "question_types": ["비교"], "min_level": "IM3", "example": "The biggest difference is how convenient it is now."},
+    {"id": "EX035", "category": "비교", "expression": "Things have changed a lot.", "meaning_ko": "많은 것이 변했어요", "question_types": ["비교"], "min_level": "IM2", "example": "Things have changed a lot since I was a kid."},
+    {"id": "EX036", "category": "비교", "expression": "On the other hand,", "meaning_ko": "반면에,", "question_types": ["비교"], "min_level": "IH", "example": "On the other hand, it's a lot more expensive than before."},
+    {"id": "EX037", "category": "비교", "expression": "I think it's mainly because ~", "meaning_ko": "주로 ~ 때문인 것 같아요", "question_types": ["비교"], "min_level": "IH", "example": "I think it's mainly because of smartphones."},
+
+    {"id": "EX038", "category": "롤플레이-질문하기", "expression": "Hi, I'm calling to ask about ~", "meaning_ko": "안녕하세요, ~에 대해 여쭤보려고 전화했어요", "question_types": ["롤플레이(질문하기)"], "min_level": "IM2", "example": "Hi, I'm calling to ask about the yoga class you offer."},
+    {"id": "EX039", "category": "롤플레이-질문하기", "expression": "Could you tell me ~?", "meaning_ko": "~을 알려 주시겠어요?", "question_types": ["롤플레이(질문하기)"], "min_level": "IM1", "example": "Could you tell me what time it opens?"},
+    {"id": "EX040", "category": "롤플레이-질문하기", "expression": "I was wondering if ~", "meaning_ko": "혹시 ~인지 궁금해서요", "question_types": ["롤플레이(질문하기)"], "min_level": "IM3", "example": "I was wondering if you have any rooms available this weekend."},
+    {"id": "EX041", "category": "롤플레이-질문하기", "expression": "Do you happen to know ~?", "meaning_ko": "혹시 ~ 아세요?", "question_types": ["롤플레이(질문하기)"], "min_level": "IH", "example": "Do you happen to know if parking is free?"},
+    {"id": "EX042", "category": "롤플레이-질문하기", "expression": "One more thing,", "meaning_ko": "하나만 더요,", "question_types": ["롤플레이(질문하기)"], "min_level": "IM2", "example": "One more thing, is there a discount for students?"},
+
+    {"id": "EX043", "category": "롤플레이-문제 해결", "expression": "I'm afraid there's a problem with ~", "meaning_ko": "죄송하지만 ~에 문제가 있어요", "question_types": ["롤플레이(문제 해결)"], "min_level": "IM3", "example": "I'm afraid there's a problem with my reservation."},
+    {"id": "EX044", "category": "롤플레이-문제 해결", "expression": "I'm really sorry, but ~", "meaning_ko": "정말 죄송하지만 ~", "question_types": ["롤플레이(문제 해결)"], "min_level": "IM1", "example": "I'm really sorry, but I can't make it tomorrow."},
+    {"id": "EX045", "category": "롤플레이-문제 해결", "expression": "Would it be possible to ~?", "meaning_ko": "~하는 게 가능할까요?", "question_types": ["롤플레이(문제 해결)"], "min_level": "IM3", "example": "Would it be possible to change my room?"},
+    {"id": "EX046", "category": "롤플레이-문제 해결", "expression": "How about ~ instead?", "meaning_ko": "대신 ~는 어때요?", "question_types": ["롤플레이(문제 해결)"], "min_level": "IM2", "example": "How about meeting on Saturday instead?"},
+    {"id": "EX047", "category": "롤플레이-문제 해결", "expression": "If that doesn't work, maybe we could ~", "meaning_ko": "그게 안 되면, ~하는 건 어떨까요", "question_types": ["롤플레이(문제 해결)"], "min_level": "IH", "example": "If that doesn't work, maybe we could get a refund."},
+
+    {"id": "EX048", "category": "연결어", "expression": "On top of that,", "meaning_ko": "게다가,", "question_types": ["전체"], "min_level": "IH", "example": "The view is great. On top of that, it's really quiet."},
+    {"id": "EX049", "category": "연결어", "expression": "Anyway,", "meaning_ko": "어쨌든,", "question_types": ["전체"], "min_level": "IM3", "example": "Anyway, that's how I spend my weekends."},
+    {"id": "EX050", "category": "연결어", "expression": "The thing is,", "meaning_ko": "문제는, 중요한 건", "question_types": ["전체"], "min_level": "IH", "example": "The thing is, I don't have much free time these days."},
+    {"id": "EX051", "category": "연결어", "expression": "That's why ~", "meaning_ko": "그래서 ~해요", "question_types": ["전체"], "min_level": "IM2", "example": "That's why I go there almost every weekend."},
+    {"id": "EX052", "category": "연결어", "expression": "Not to mention ~", "meaning_ko": "~은 말할 것도 없고", "question_types": ["전체"], "min_level": "AL", "example": "It's cheap and convenient, not to mention really delicious."},
+    {"id": "EX053", "category": "연결어", "expression": "Having said that,", "meaning_ko": "그렇긴 하지만,", "question_types": ["전체"], "min_level": "AL", "example": "Having said that, I still prefer the old way."},
+
+    {"id": "EX054", "category": "감정·평가", "expression": "It was such a ~ experience.", "meaning_ko": "정말 ~한 경험이었어요", "question_types": ["과거 경험"], "min_level": "IM3", "example": "It was such an amazing experience."},
+    {"id": "EX055", "category": "감정·평가", "expression": "I was so ~ that ~", "meaning_ko": "너무 ~해서 ~했어요", "question_types": ["과거 경험"], "min_level": "IM3", "example": "I was so tired that I fell asleep on the bus."},
+    {"id": "EX056", "category": "감정·평가", "expression": "It really helps me ~", "meaning_ko": "~하는 데 정말 도움이 돼요", "question_types": ["루틴", "묘사"], "min_level": "IM2", "example": "It really helps me relieve stress."},
+    {"id": "EX057", "category": "감정·평가", "expression": "I can't imagine my life without ~", "meaning_ko": "~ 없는 삶은 상상할 수 없어요", "question_types": ["묘사", "루틴"], "min_level": "IH", "example": "I can't imagine my life without music."},
+
+    {"id": "EX058", "category": "마무리", "expression": "That's about it.", "meaning_ko": "대략 그 정도예요", "question_types": ["전체"], "min_level": "IM1", "example": "That's about it. Thanks for listening."},
+    {"id": "EX059", "category": "마무리", "expression": "So, that's why I love ~", "meaning_ko": "그래서 제가 ~을 좋아해요", "question_types": ["묘사", "루틴"], "min_level": "IM2", "example": "So, that's why I love going to that park."},
+    {"id": "EX060", "category": "마무리", "expression": "All in all,", "meaning_ko": "전반적으로, 결론적으로", "question_types": ["전체"], "min_level": "IH", "example": "All in all, it was a trip I'll remember for a long time."}
+  ]
+}
