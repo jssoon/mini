@@ -15,3 +15,6 @@ __pycache__/
 .idea/
 .DS_Store
 Thumbs.db
+
+# 직접 실행으로 저장한 스크립트
+opic_script_*
