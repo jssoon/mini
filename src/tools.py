@@ -109,20 +109,26 @@ def get_topic_info(topic: str) -> str:
         return _to_json({"error": "주제 이름을 입력해야 합니다."})
 
     topics = _load("topics.json")["topics"]
-    exact = [t for t in topics if t["id"].lower() == query or t["name_en"].lower() == query]
+    aliases = lambda t: [a.lower() for a in t.get("aliases", [])]  # noqa: E731
+    exact = [
+        t for t in topics
+        if query in (t["id"].lower(), t["name_en"].lower()) or query in aliases(t)
+    ]
     if exact:
         return _to_json(exact[0])
 
     candidates = [
         t for t in topics
         if query in t["id"].lower() or query in t["name_en"].lower()
+        or any(query in a or a in query for a in aliases(t))
     ]
     if len(candidates) == 1:
         return _to_json(candidates[0])
     if candidates:
+        # 다시 조회하지 않아도 되도록 후보의 상세 정보를 모두 돌려준다.
         return _to_json({
-            "message": "여러 주제가 해당됩니다. 하나를 골라 다시 조회하세요.",
-            "candidates": [t["id"] for t in candidates],
+            "message": "여러 주제가 해당됩니다. 요청에 가장 맞는 주제를 골라 쓰세요. 다시 조회할 필요는 없습니다.",
+            "candidates": candidates[:5],
         })
     return _to_json({
         "error": f"목록에 없는 주제입니다: {topic}",
@@ -136,11 +142,12 @@ def get_level_criteria(level: str, question_type: Optional[str] = None) -> str:
 
     스크립트를 쓰기 전에 반드시 호출해 분량과 난이도를 맞춘다.
     문제 유형을 함께 주면 그 유형의 작성 가이드(중심 내용, 시제, 핵심 패턴)도 돌려준다.
+    콤보 세트처럼 유형이 여러 개면 쉼표로 이어서 한 번에 조회한다 (예: "묘사, 과거 경험, 비교").
 
     Args:
         level: 목표 등급. IM1, IM2, IM3, IH, AL 중 하나.
         question_type: 문제 유형. 묘사, 루틴, 과거 경험, 비교,
-            롤플레이(질문하기), 롤플레이(문제 해결) 중 하나. 생략 가능.
+            롤플레이(질문하기), 롤플레이(문제 해결) 중 하나 또는 쉼표로 이은 여러 개. 생략 가능.
     """
     normalized = _normalize_level(level)
     if not normalized:
@@ -152,12 +159,19 @@ def get_level_criteria(level: str, question_type: Optional[str] = None) -> str:
 
     if question_type:
         guides = data["question_type_guides"]
-        guide = guides.get(question_type.strip())
-        if guide:
-            result["question_type_guide"] = {"question_type": question_type.strip(), **guide}
-        else:
+        found, unknown = [], []
+        for qt in (q.strip() for q in question_type.split(",") if q.strip()):
+            if qt in guides:
+                found.append({"question_type": qt, **guides[qt]})
+            else:
+                unknown.append(qt)
+        if len(found) == 1:
+            result["question_type_guide"] = found[0]
+        elif found:
+            result["question_type_guides"] = found
+        if unknown:
             result["question_type_warning"] = {
-                "message": f"없는 문제 유형입니다: {question_type}",
+                "message": f"없는 문제 유형입니다: {', '.join(unknown)}",
                 "valid_question_types": list(guides),
             }
     return _to_json(result)

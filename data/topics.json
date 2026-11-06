@@ -28,6 +28,7 @@
   "topics": [
     {
       "id": "자기소개",
+      "aliases": ["자기 소개", "introduce yourself"],
       "category": "자기소개",
       "source": "common",
       "name_en": "Self-introduction",
@@ -39,6 +40,7 @@
     },
     {
       "id": "직업",
+      "aliases": ["회사", "직장", "회사원", "job", "company"],
       "category": "직업",
       "source": "survey",
       "name_en": "Work / Company",
@@ -66,6 +68,7 @@
     },
     {
       "id": "거주 형태",
+      "aliases": ["집", "아파트", "주택", "우리 집", "house", "apartment"],
       "category": "거주 형태",
       "source": "survey",
       "name_en": "Home",
